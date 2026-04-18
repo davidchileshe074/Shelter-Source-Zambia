@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shelter Source Zambia</title>
+    <meta name="description" content="Get in touch with Shelter Source Zambia for premium real estate services in Lusaka. Call us or visit our office.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-home"></i></div>
+                Shelter Source
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="properties.html" class="nav-link">Properties</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://wa.me/260977784144" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Let's Talk
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to answer all your real estate questions.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Get in Touch</h2>
+                    <p style="margin-bottom: 3rem;">Ready to buy, sell, or rent? Contact our expert real estate agents today. We would love to discuss your property needs in Zambia.</p>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Phone Number</h3>
+                                <p style="margin: 0;">+260 977784144</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">WhatsApp</h3>
+                                <p style="margin: 0;"><a href="https://wa.me/260977784144" target="_blank" style="color: white; text-decoration: underline;">Chat With Us Now</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Email Address</h3>
+                                <p style="margin: 0;">info@sheltersource.co.zm</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item" style="margin-bottom: 0;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Office Location</h3>
+                                <p style="margin: 0;">Lusaka, Zambia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="background-color: white; padding: 2.5rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--secondary);">Send a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Shelter Source Zambia. We will get back to you shortly.'); this.reset();">
+                        <div class="form-group">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+260..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Select a Topic</option>
+                                <option value="buy">I want to buy a property</option>
+                                <option value="sell">I want to sell a property</option>
+                                <option value="rent">I am looking to rent</option>
+                                <option value="manage">Property Management Enquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123114.77914441416!2d28.212711091217036!3d-15.41624838634563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940f375001362e5%3A0xcfdff6e7bf7b7074!2sLusaka%2C%20Zambia!5e0!3m2!1sen!2sus!4v1689255018698!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: white;">
+                        <div class="logo-icon"><i class="fas fa-home"></i></div>
+                        Shelter Source
+                    </a>
+                    <p>Your trusted property partner in Zambia. Providing premium real estate services including sales, leasing, management, and consultancy.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Property Sales</a></li>
+                        <li><a href="services.html">Property Leasing</a></li>
+                        <li><a href="services.html">Property Management</a></li>
+                        <li><a href="services.html">Renovations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-map-marker-alt" style="margin-top: 5px; color: var(--primary);"></i> Lusaka, Zambia</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-phone-alt" style="margin-top: 5px; color: var(--primary);"></i> +260 977784144</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-envelope" style="margin-top: 5px; color: var(--primary);"></i> info@sheltersource.co.zm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shelter Source Zambia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/260977784144" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

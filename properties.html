@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Shelter Source Zambia</title>
+    <meta name="description" content="Browse our wide selection of premium real estate properties for sale and lease in Lusaka and across Zambia.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .filter-bar {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border: 1px solid var(--border-color);
+        }
+        
+        .filter-select {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--light-gray);
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-home"></i></div>
+                Shelter Source
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="properties.html" class="nav-link active">Properties</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://wa.me/260977784144" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Let's Talk
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Properties</h1>
+            <p>Discover houses, offices, warehouses, and farms perfectly tailored to your needs.</p>
+        </div>
+    </header>
+
+    <!-- Properties Grid Section -->
+    <section class="section reveal">
+        <div class="container">
+            
+            <div class="filter-bar">
+                <select class="filter-select">
+                    <option value="">Status (All)</option>
+                    <option value="sale">For Sale</option>
+                    <option value="lease">For Lease</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Property Type (All)</option>
+                    <option value="house">House</option>
+                    <option value="office">Office</option>
+                    <option value="warehouse">Warehouse</option>
+                    <option value="farm">Farm</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Location (All)</option>
+                    <option value="kabulonga">Kabulonga</option>
+                    <option value="rhodespark">Rhodes Park</option>
+                    <option value="industrial">Heavy Industrial</option>
+                    <option value="makeni">Makeni</option>
+                </select>
+                <button class="btn btn-primary" style="padding: 0.75rem 2rem;">Search</button>
+            </div>
+
+            <div class="grid-3">
+                <!-- Property 1 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern House">
+                        <div class="property-price">ZMW 3,500,000</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Kabulonga, Lusaka</div>
+                        <h3 class="property-title">Modern 4-Bedroom Villa</h3>
+                        <p>Beautiful luxury villa with swimming pool and spacious garden in a prime neighborhood.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span class="feature"><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span class="feature"><i class="fas fa-vector-square"></i> 1,200 sqm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge">For Lease</div>
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Office">
+                        <div class="property-price">ZMW 15,000 / mo</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Rhodes Park, Lusaka</div>
+                        <h3 class="property-title">Premium Office Space</h3>
+                        <p>A-grade commercial space with modern amenities, ample parking, and great visibility.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-building"></i> Commercial</span>
+                            <span class="feature"><i class="fas fa-parking"></i> 10 Spots</span>
+                            <span class="feature"><i class="fas fa-vector-square"></i> 300 sqm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8ed745330c?auto=format&fit=crop&w=800&q=80" alt="Warehouse">
+                        <div class="property-price">ZMW 5,200,000</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Heavy Industrial Area, Lusaka</div>
+                        <h3 class="property-title">Large Industrial Warehouse</h3>
+                        <p>High-ceiling warehouse ideal for logistics or manufacturing with attached office space.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-warehouse"></i> Industrial</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Truck Access</span>
+                            <span class="feature"><i class="fas fa-vector-square"></i> 2,500 sqm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 4 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge" style="background-color: var(--secondary);">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Farm Land">
+                        <div class="property-price">ZMW 1,800,000</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Makeni, Lusaka</div>
+                        <h3 class="property-title">Fertile Agricultural Farm</h3>
+                        <p>Cleared arable land with a borehole, farmhouse skeleton, and excellent access roads.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-tractor"></i> Farm</span>
+                            <span class="feature"><i class="fas fa-water"></i> Borehole</span>
+                            <span class="feature"><i class="fas fa-vector-square"></i> 15 Hectares</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge">For Lease</div>
+                        <img src="https://images.unsplash.com/photo-1600607687931-cecebd80327f?auto=format&fit=crop&w=800&q=80" alt="Apartment">
+                        <div class="property-price">ZMW 8,000 / mo</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Woodlands, Lusaka</div>
+                        <h3 class="property-title">Classic 3-Bed Apartment</h3>
+                        <p>Secure gated community apartment offering serenity, tight security, and modern interiors.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span class="feature"><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span class="feature"><i class="fas fa-shield-alt"></i> Secure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="property-card">
+                    <div class="property-img-wrapper">
+                        <div class="property-badge">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="Luxury Home">
+                        <div class="property-price">ZMW 4,100,000</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Roma, Lusaka</div>
+                        <h3 class="property-title">Contemporary Roma Estate</h3>
+                        <p>Architectural masterpiece featuring open-plan living, smart home tech, and manicured lawns.</p>
+                        <div class="property-features">
+                            <span class="feature"><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span class="feature"><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span class="feature"><i class="fas fa-wifi"></i> Smart Home</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination Mock -->
+            <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 4rem;">
+                <button class="btn btn-primary" style="padding: 0.5rem 1rem;">1</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color);">2</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color);"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <!-- Mortgage Calculator -->
+            <div class="mortgage-calculator reveal">
+                <div class="section-title" style="margin-bottom: 2rem;">
+                    <h2>Mortgage Calculator</h2>
+                    <p>Estimate your monthly payments</p>
+                </div>
+                <form id="mortgage-form">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="loan-amount" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Loan Amount (ZMW)</label>
+                            <input type="number" id="loan-amount" class="form-control" placeholder="e.g. 1500000" required min="10000">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest-rate" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Interest Rate (%)</label>
+                            <input type="number" id="interest-rate" class="form-control" placeholder="e.g. 8.5" required step="0.1" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-years" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Loan Term (Years)</label>
+                            <input type="number" id="loan-years" class="form-control" placeholder="e.g. 20" required min="1" max="50">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Calculate Monthly Payment</button>
+                </form>
+                
+                <div class="mortgage-result">
+                    Estimated Monthly Payment:
+                    <span id="monthly-payment">ZMW 0.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: white;">
+                        <div class="logo-icon"><i class="fas fa-home"></i></div>
+                        Shelter Source
+                    </a>
+                    <p>Your trusted property partner in Zambia. Providing premium real estate services including sales, leasing, management, and consultancy.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Property Sales</a></li>
+                        <li><a href="services.html">Property Leasing</a></li>
+                        <li><a href="services.html">Property Management</a></li>
+                        <li><a href="services.html">Renovations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-map-marker-alt" style="margin-top: 5px; color: var(--primary);"></i> Lusaka, Zambia</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-phone-alt" style="margin-top: 5px; color: var(--primary);"></i> +260 977784144</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-envelope" style="margin-top: 5px; color: var(--primary);"></i> info@sheltersource.co.zm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shelter Source Zambia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/260977784144" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Shelter Source Zambia</title>
+    <meta name="description" content="Explore Shelter Source Zambia's real estate services, including property sales, leasing, management, and professional renovations.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .service-detail:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .service-detail:nth-child(even) .service-content {
+            direction: ltr;
+        }
+        
+        .service-detail img {
+            box-shadow: var(--shadow-md);
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 992px) {
+            .service-detail {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                direction: ltr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-home"></i></div>
+                Shelter Source
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="properties.html" class="nav-link">Properties</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://wa.me/260977784144" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Let's Talk
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive property solutions tailored for individuals and businesses.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Services -->
+    <section class="section">
+        <div class="container">
+            <!-- Sales -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1560518883-b41908204f12?auto=format&fit=crop&w=800&q=80" alt="Property Sales Meeting">
+                </div>
+                <div class="service-content">
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary);">Property Sales</h2>
+                    <h3 style="margin-bottom: 1.5rem;">Expert Guidance in Buying & Selling</h3>
+                    <p>Whether you're looking for your dream home or parting with a valued asset, we simplify the buying and selling process. We leverage deep market analytics to ensure accurate valuations and strategic marketing that connects buyers and sellers efficiently.</p>
+                    <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Residential Estates & Houses</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Commercial Office Blocks</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Blank Land & Agricultural Farms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Leasing -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Office Leasing">
+                </div>
+                <div class="service-content">
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary);">Property Leasing</h2>
+                    <h3 style="margin-bottom: 1.5rem;">Connecting Tenants & Landlords</h3>
+                    <p>Finding the right space or the right tenant shouldn't be stressful. We facilitate seamless leasing for residential homes, corporate offices, extensive warehouses, and fertile farm lands, ensuring mutually beneficial agreements for all parties involved.</p>
+                    <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Short & Long Term Rentals</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Thorough Tenant Screening</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Lease Agreement Formulation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Management -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Property Management">
+                </div>
+                <div class="service-content">
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary);">Property Management</h2>
+                    <h3 style="margin-bottom: 1.5rem;">Protecting & Enhancing Your Investment</h3>
+                    <p>Maximize your return on investment while eliminating the headaches of daily property administration. Our comprehensive management service handles rent collection, tenant relations, and regular property inspections to ensure your asset remains pristine and profitable.</p>
+                    <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Timely Rent Collection</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Routine Inspections</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Financial Reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Renovations -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1541889816001-ce731cd91807?auto=format&fit=crop&w=800&q=80" alt="Property Renovations">
+                </div>
+                <div class="service-content">
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary);">Maintenance & Renovations</h2>
+                    <h3 style="margin-bottom: 1.5rem;">Breathing New Life into Properties</h3>
+                    <p>Whether preparing a property for sale or upgrading for better leasing rates, our in-house network of skilled contractors delivers top-tier renovations and routine maintenance. Quality craftsmanship guaranteed.</p>
+                    <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Preventative Maintenance</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Modern Aesthetics Upgrades</li>
+                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Plumbing & Electrical Fixes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="contact.html" class="btn btn-primary">Hire Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: white;">
+                        <div class="logo-icon"><i class="fas fa-home"></i></div>
+                        Shelter Source
+                    </a>
+                    <p>Your trusted property partner in Zambia. Providing premium real estate services including sales, leasing, management, and consultancy.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Property Sales</a></li>
+                        <li><a href="services.html">Property Leasing</a></li>
+                        <li><a href="services.html">Property Management</a></li>
+                        <li><a href="services.html">Renovations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-map-marker-alt" style="margin-top: 5px; color: var(--primary);"></i> Lusaka, Zambia</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-phone-alt" style="margin-top: 5px; color: var(--primary);"></i> +260 977784144</li>
+                        <li style="display: flex; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="fas fa-envelope" style="margin-top: 5px; color: var(--primary);"></i> info@sheltersource.co.zm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shelter Source Zambia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/260977784144" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
