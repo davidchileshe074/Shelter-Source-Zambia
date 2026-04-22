@@ -125,6 +125,7 @@
                     <div class="property-img-wrapper">
                         <div class="property-badge">For Sale</div>
                         <button class="wishlist-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        <button class="tour-btn" title="Start Virtual Tour"><i class="fas fa-vr-cardboard"></i> 360°</button>
                         <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern House">
                         <div class="property-price">ZMW 3,500,000</div>
                     </div>
@@ -326,10 +327,59 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/260977784144" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Concierge Chat -->
+    <div class="concierge-chat" id="conciergeChat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <img src="Assets/logo.png" alt="Concierge">
+            </div>
+            <div class="chat-info">
+                <h4>Shelter Concierge</h4>
+                <span>Online</span>
+            </div>
+            <button class="chat-close" id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-message">
+                Hello! Welcome to Shelter Source Zambia. How can we help you today?
+            </div>
+            <div class="chat-options">
+                <button class="chat-opt" data-msg="I want to buy a property">🏠 I want to Buy</button>
+                <button class="chat-opt" data-msg="I am looking for a lease">🔑 Looking to Lease</button>
+                <button class="chat-opt" data-msg="I need property management">📈 Management</button>
+                <button class="chat-opt" data-msg="I want to talk to an agent">📞 Talk to Agent</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Quick Actions -->
+    <div class="mobile-actions">
+        <a href="tel:+260977784144" class="m-action"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/260977784144" class="m-action m-whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:info@sheltersource.co.zm" class="m-action"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
+
+    <!-- Virtual Tour Modal -->
+    <div class="modal" id="tourModal">
+        <div class="modal-content tour-modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="tour-header">
+                <h3>360° Virtual Tour Experience</h3>
+                <p>Kabulonga Modern Villa</p>
+            </div>
+            <div class="tour-view">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="360 View">
+                <div class="tour-overlay-icon">
+                    <i class="fas fa-sync-alt fa-spin"></i>
+                    <span>Loading 360° Panorama...</span>
+                </div>
+            </div>
+            <div class="tour-footer">
+                <p>This is a simulated experience. Contact us for a live VR walkthrough.</p>
+                <a href="https://wa.me/260977784144" class="btn btn-primary">Schedule Live Tour</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
