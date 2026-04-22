@@ -235,4 +235,67 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => toast.remove(), 500);
     }, 3000);
   }
+
+  // 5. Concierge Chat Logic
+  const conciergeChat = document.getElementById('conciergeChat');
+  const closeChat = document.getElementById('closeChat');
+  
+  if (conciergeChat) {
+    // Show chat after 3 seconds
+    setTimeout(() => {
+      if (!sessionStorage.getItem('chatClosed')) {
+        conciergeChat.style.display = 'flex';
+      }
+    }, 3000);
+
+    closeChat.addEventListener('click', () => {
+      conciergeChat.style.display = 'none';
+      sessionStorage.setItem('chatClosed', 'true');
+    });
+
+    const chatOpts = document.querySelectorAll('.chat-opt');
+    chatOpts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const msg = opt.getAttribute('data-msg');
+        conciergeChat.style.display = 'none';
+        sessionStorage.setItem('chatClosed', 'true');
+        
+        // Redirect or open WhatsApp based on option
+        if (msg.includes('talk to an agent')) {
+          window.open('https://wa.me/260977784144', '_blank');
+        } else if (msg.includes('buy') || msg.includes('lease')) {
+          window.location.href = 'properties.html';
+        } else {
+          window.location.href = 'contact.html';
+        }
+      });
+    });
+  }
+
+  // 6. Virtual Tour Modal Logic
+  const tourModal = document.getElementById('tourModal');
+  const closeModal = document.getElementById('closeModal');
+  const tourBtns = document.querySelectorAll('.tour-btn');
+
+  if (tourModal && tourBtns.length > 0) {
+    tourBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tourModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      tourModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === tourModal) {
+        tourModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });
