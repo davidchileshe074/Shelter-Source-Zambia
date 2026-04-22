@@ -70,8 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+  // Preloader
+  const preloader = document.querySelector('.preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+      }, 500);
+    });
+  }
+
+  // Scroll Indicator
+  const scrollBar = document.getElementById('scrollBar');
+  if (scrollBar) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollBar.style.width = scrolled + "%";
+    });
+  }
+
   // Scroll Animations (Reveal)
-  const reveals = document.querySelectorAll('.reveal');
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
   const revealOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
@@ -79,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+  }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
 
   reveals.forEach(reveal => {
     revealOnScroll.observe(reveal);
@@ -152,5 +173,66 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('monthly-payment').innerHTML = 'Invalid Input';
       }
     });
+  }
+
+  // --- NEW FEATURES ---
+
+  // 1. Currency Toggle Logic
+  const currencyToggle = document.getElementById('currency-toggle');
+  let currentCurrency = 'ZMW';
+  const exchangeRate = 0.038; // Mock ZMW to USD
+
+  const updatePrices = (currency) => {
+    const prices = document.querySelectorAll('.property-price, #monthly-payment');
+    prices.forEach(price => {
+      const text = price.innerText;
+      const valueMatch = text.match(/[\d,.]+/);
+      if (valueMatch) {
+        let value = parseFloat(valueMatch[0].replace(/,/g, ''));
+        if (currency === 'USD') {
+          value = value * exchangeRate;
+          price.innerHTML = `$ ${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        } else {
+          value = value / exchangeRate;
+          price.innerHTML = `ZMW ${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        }
+      }
+    });
+  };
+
+  currencyToggle.addEventListener('click', () => {
+    currentCurrency = currentCurrency === 'ZMW' ? 'USD' : 'ZMW';
+    currencyToggle.querySelector('span').innerText = currentCurrency;
+    updatePrices(currentCurrency);
+  });
+
+  // 3. Wishlist Logic
+  const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+  wishlistBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      if (btn.classList.contains('active')) {
+        icon.className = 'fas fa-heart';
+        showToast('Property added to wishlist!');
+      } else {
+        icon.className = 'far fa-heart';
+      }
+    });
+  });
+
+  // 4. Toast Notification
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerText = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.classList.add('show'), 100);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 500);
+    }, 3000);
   }
 });

@@ -18,12 +18,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="Assets/logo.png" alt="Shelter Source Logo" class="preloader-logo">
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator-container">
+        <div class="scroll-indicator-bar" id="scrollBar"></div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="fas fa-home"></i></div>
-                Shelter Source
+                <img src="Assets/logo.png" alt="Shelter Source Zambia Logo">
             </a>
             
             <ul class="nav-links">
@@ -35,6 +47,9 @@
             </ul>
             
             <div class="nav-actions">
+                <div class="currency-toggle" id="currency-toggle" title="Switch Currency">
+                    <span>ZMW</span>
+                </div>
                 <a href="https://wa.me/260977784144" class="btn btn-primary" target="_blank">
                     <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Let's Talk
                 </a>
@@ -114,8 +129,7 @@
             <div class="footer-top">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: white;">
-                        <div class="logo-icon"><i class="fas fa-home"></i></div>
-                        Shelter Source
+                        <img src="Assets/logo.png" alt="Shelter Source Zambia Logo">
                     </a>
                     <p>Your trusted property partner in Zambia. Providing premium real estate services including sales, leasing, management, and consultancy.</p>
                 </div>

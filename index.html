@@ -18,12 +18,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="Assets/logo.png" alt="Shelter Source Logo" class="preloader-logo">
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator-container">
+        <div class="scroll-indicator-bar" id="scrollBar"></div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="fas fa-home"></i></div>
-                Shelter Source
+                <img src="Assets/logo.png" alt="Shelter Source Zambia Logo">
             </a>
             
             <ul class="nav-links">
@@ -35,6 +47,9 @@
             </ul>
             
             <div class="nav-actions">
+                <div class="currency-toggle" id="currency-toggle" title="Switch Currency">
+                    <span>ZMW</span>
+                </div>
                 <a href="https://wa.me/260977784144" class="btn btn-primary" target="_blank">
                     <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Let's Talk
                 </a>
@@ -129,9 +144,10 @@
             
             <div class="grid-3">
                 <!-- Property 1 -->
-                <div class="property-card">
+                <div class="property-card reveal delay-1">
                     <div class="property-img-wrapper">
                         <div class="property-badge">For Sale</div>
+                        <button class="wishlist-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                         <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern House">
                         <div class="property-price">ZMW 3,500,000</div>
                     </div>
@@ -148,9 +164,10 @@
                 </div>
 
                 <!-- Property 2 -->
-                <div class="property-card">
+                <div class="property-card reveal delay-2">
                     <div class="property-img-wrapper">
                         <div class="property-badge">For Lease</div>
+                        <button class="wishlist-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Office">
                         <div class="property-price">ZMW 15,000 / mo</div>
                     </div>
@@ -167,9 +184,10 @@
                 </div>
 
                 <!-- Property 3 -->
-                <div class="property-card">
+                <div class="property-card reveal delay-3">
                     <div class="property-img-wrapper">
                         <div class="property-badge">For Sale</div>
+                        <button class="wishlist-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8ed745330c?auto=format&fit=crop&w=800&q=80" alt="Warehouse">
                         <div class="property-price">ZMW 5,200,000</div>
                     </div>
@@ -193,13 +211,13 @@
     </section>
 
     <!-- About Preview -->
-    <section class="section bg-light reveal">
+    <section class="section bg-light">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
+                <div class="about-image reveal-left">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Office Professional">
                 </div>
-                <div class="about-content">
+                <div class="about-content reveal-right">
                     <h2 style="color: var(--primary); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">About Us</h2>
                     <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Leading the Real Estate Market in Zambia</h3>
                     <p>At Shelter Source Zambia, we pride ourselves on delivering standard-setting real estate services. With deep local roots and a commitment to professional excellence, we ensure every transaction is smooth and rewarding.</p>
@@ -270,8 +288,7 @@
             <div class="footer-top">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: white;">
-                        <div class="logo-icon"><i class="fas fa-home"></i></div>
-                        Shelter Source
+                        <img src="Assets/logo.png" alt="Shelter Source Zambia Logo">
                     </a>
                     <p>Your trusted property partner in Zambia. Providing premium real estate services including sales, leasing, management, and consultancy.</p>
                 </div>
@@ -316,6 +333,13 @@
     <a href="https://wa.me/260977784144" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Mobile Quick Actions -->
+    <div class="mobile-actions">
+        <a href="tel:+260977784144" class="m-action"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/260977784144" class="m-action m-whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:info@sheltersource.co.zm" class="m-action"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
